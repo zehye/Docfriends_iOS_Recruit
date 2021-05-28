@@ -2,8 +2,8 @@
   "pageMap": {
     "pageNumber": 1,
     "rowPerPage": 10,
-    "pageCount": 2,
-    "totalCount": 15
+    "pageCount": 1,
+    "totalCount": 10
   },
   "expertListPosition": 3,
   "companyListPosition": 7,
@@ -191,7 +191,7 @@
       "name": "김닥톡",
       "typeName": "의사",
       "companyName": "닥프렌즈 병원",
-      "profileImagePath": "",
+      "profileImagePath": "https://img.doctalk.co.kr/dev/user/image/20210127/1J2NSFVD-70bs-4A1n-b7DZ-WuC0qgTMV7lF.png",
       "tagList": [
         {
           "key": 18,
@@ -223,19 +223,14 @@
       "name": "최닥톡",
       "typeName": "의사",
       "companyName": "닥프렌즈 병원",
-      "profileImagePath": "",
-      "tagList": [
-        {
-          "key": 104,
-          "name": "다이어트"
-        }
-      ]
+      "profileImagePath": "https://img.doctalk.co.kr/dev/user/image/20210127/3hJ0vec0-69lr-4NCv-aXyi-kKfpyuP4BX8p.png",
+      "tagList": []
     },
     {
       "name": "이닥톡",
       "typeName": "운동치료사",
       "companyName": "닥프렌즈 치료원",
-      "profileImagePath": "",
+      "profileImagePath": "https://img.doctalk.co.kr/dev/user/image/20210127/1By5BXOa-1BOu-4QjY-cAZz-pv0F4aErHUCN.png",
       "tagList": [
         {
           "key": 105,
@@ -257,19 +252,19 @@
       "companyName": "닥프렌즈 병원",
       "address": "서울특별시 강남구 논현로 164 (도곡동)",
       "addressEtc": "10층",
-      "introPath": "https://img.doctalk.co.kr/doctalk/res/dev/2019/11/19/3rruJoeJ-gVAm-4Kxf-a65y-1FBAjYNrLf6L.png"
+      "introPath": "https://img.doctalk.co.kr/dev/company/image/20210127/4EqCAMnN-4BCd-4R4A-buhw-gpuSU8SMMuPp.png"
     },
     {
       "companyName": "닥프렌즈 한의원",
       "address": "서울특별시 강남구 논현로 164 (도곡동)",
       "addressEtc": "10층",
-      "introPath": "https://img.doctalk.co.kr/doctalk/res/dev/2019/11/19/3rruJoeJ-gVAm-4Kxf-a65y-1FBAjYNrLf6L.png"
+      "introPath": "https://img.doctalk.co.kr/dev/company/image/20210127/3NI5f2Cw-1eVt-4r3C-bPIy-IqJUvQPgaYMX.png"
     },
     {
       "companyName": "닥프렌즈 치료원",
       "address": "서울특별시 강남구 논현로 164 (도곡동)",
       "addressEtc": "",
-      "introPath": "https://img.doctalk.co.kr/doctalk/res/dev/2019/11/19/3rruJoeJ-gVAm-4Kxf-a65y-1FBAjYNrLf6L.png"
+      "introPath": "https://img.doctalk.co.kr/dev/company/image/20210127/2Bl7F8Jo-c6If-4KbJ-9sRJ-1gP9BdRfkeG8.png"
     }
   ]
 }
