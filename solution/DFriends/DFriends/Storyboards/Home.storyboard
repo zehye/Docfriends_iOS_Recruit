@@ -62,7 +62,7 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="713"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3cZ-dD-fb4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Search" id="3cZ-dD-fb4" customClass="SearchTableViewCell" customModule="DFriends" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3cZ-dD-fb4" id="wST-iN-80H">
@@ -85,7 +85,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JDG-tG-bUj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Consult" id="JDG-tG-bUj" customClass="ConsultTableViewCell" customModule="DFriends" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="108.5" width="414" height="200.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JDG-tG-bUj" id="yco-ur-Cwv">
@@ -96,7 +96,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="200.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCD-fd-1yU">
-                                                            <rect key="frame" x="10" y="10" width="394" height="41"/>
+                                                            <rect key="frame" x="20" y="10" width="374" height="41"/>
                                                             <string key="text">헌법개정안이 제2항의 찬성을 얻은 때에는 헌법개정은 확정되며, 대통령은 즉시 이를 공포하여야 한다. 선거와 국민투표의 공정한 관리 및 정당에 관한 사무를 처리하기 위하여 선거관리위원회를 둔다.
 
 국가원로자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 국회의원이 회기전에 체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다.</string>
@@ -105,13 +105,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESL-li-FPY">
-                                                            <rect key="frame" x="10" y="58" width="394" height="21"/>
+                                                            <rect key="frame" x="20" y="58" width="374" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6u0-aI-MyW">
-                                                            <rect key="frame" x="10" y="86" width="394" height="61"/>
+                                                            <rect key="frame" x="20" y="86" width="374" height="61"/>
                                                             <string key="text">헌법개정안이 제2항의 찬성을 얻은 때에는 헌법개정은 확정되며, 대통령은 즉시 이를 공포하여야 한다. 선거와 국민투표의 공정한 관리 및 정당에 관한 사무를 처리하기 위하여 선거관리위원회를 둔다.
 
 국가원로자문회의의 조직·직무범위 기타 필요한 사항은 법률로 정한다. 국회의원이 회기전에 체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다.</string>
@@ -120,13 +120,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BS-JY-XUx">
-                                                            <rect key="frame" x="10" y="169.5" width="42" height="21"/>
+                                                            <rect key="frame" x="20" y="169.5" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <color key="textColor" systemColor="systemGreenColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en2-UJ-UH5">
-                                                            <rect key="frame" x="364.5" y="171" width="39.5" height="19.5"/>
+                                                            <rect key="frame" x="354.5" y="171" width="39.5" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -134,32 +134,40 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="8BS-JY-XUx" firstAttribute="leading" secondItem="Jdv-aM-Vb2" secondAttribute="leading" constant="10" id="4ns-CF-60X"/>
-                                                        <constraint firstAttribute="trailing" secondItem="en2-UJ-UH5" secondAttribute="trailing" constant="10" id="6Dz-Vn-zCD"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ESL-li-FPY" secondAttribute="trailing" constant="10" id="DQw-lg-PzE"/>
+                                                        <constraint firstItem="8BS-JY-XUx" firstAttribute="leading" secondItem="Jdv-aM-Vb2" secondAttribute="leading" constant="20" id="4ns-CF-60X"/>
+                                                        <constraint firstAttribute="trailing" secondItem="en2-UJ-UH5" secondAttribute="trailing" constant="20" id="6Dz-Vn-zCD"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ESL-li-FPY" secondAttribute="trailing" constant="20" id="DQw-lg-PzE"/>
                                                         <constraint firstAttribute="bottom" secondItem="en2-UJ-UH5" secondAttribute="bottom" constant="10" id="KmK-d5-ZRS"/>
                                                         <constraint firstAttribute="bottom" secondItem="8BS-JY-XUx" secondAttribute="bottom" constant="10" id="W8R-rB-4zG"/>
                                                         <constraint firstItem="ESL-li-FPY" firstAttribute="top" secondItem="jCD-fd-1yU" secondAttribute="bottom" constant="7" id="Xvr-Ke-ajG"/>
-                                                        <constraint firstItem="6u0-aI-MyW" firstAttribute="leading" secondItem="Jdv-aM-Vb2" secondAttribute="leading" constant="10" id="Z4q-6r-QUs"/>
-                                                        <constraint firstAttribute="trailing" secondItem="6u0-aI-MyW" secondAttribute="trailing" constant="10" id="i4t-CB-XMi"/>
-                                                        <constraint firstItem="jCD-fd-1yU" firstAttribute="leading" secondItem="Jdv-aM-Vb2" secondAttribute="leading" constant="10" id="ioL-7i-nB9"/>
+                                                        <constraint firstItem="6u0-aI-MyW" firstAttribute="leading" secondItem="Jdv-aM-Vb2" secondAttribute="leading" constant="20" id="Z4q-6r-QUs"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6u0-aI-MyW" secondAttribute="trailing" constant="20" id="i4t-CB-XMi"/>
+                                                        <constraint firstItem="jCD-fd-1yU" firstAttribute="leading" secondItem="Jdv-aM-Vb2" secondAttribute="leading" constant="20" id="ioL-7i-nB9"/>
                                                         <constraint firstItem="6u0-aI-MyW" firstAttribute="top" secondItem="ESL-li-FPY" secondAttribute="bottom" constant="7" id="ruS-5S-pkI"/>
                                                         <constraint firstItem="jCD-fd-1yU" firstAttribute="top" secondItem="Jdv-aM-Vb2" secondAttribute="top" constant="10" id="soH-p1-POF"/>
-                                                        <constraint firstItem="ESL-li-FPY" firstAttribute="leading" secondItem="Jdv-aM-Vb2" secondAttribute="leading" constant="10" id="vWz-cV-czW"/>
+                                                        <constraint firstItem="ESL-li-FPY" firstAttribute="leading" secondItem="Jdv-aM-Vb2" secondAttribute="leading" constant="20" id="vWz-cV-czW"/>
                                                         <constraint firstAttribute="height" constant="200" id="wZQ-MJ-OE1"/>
-                                                        <constraint firstAttribute="trailing" secondItem="jCD-fd-1yU" secondAttribute="trailing" constant="10" id="zaP-5q-gvH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jCD-fd-1yU" secondAttribute="trailing" constant="20" id="zaP-5q-gvH"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Jdv-aM-Vb2" firstAttribute="top" secondItem="yco-ur-Cwv" secondAttribute="top" id="0ZW-QC-idY"/>
                                                 <constraint firstItem="Jdv-aM-Vb2" firstAttribute="leading" secondItem="yco-ur-Cwv" secondAttribute="leading" id="94v-ue-OD8"/>
                                                 <constraint firstAttribute="bottom" secondItem="Jdv-aM-Vb2" secondAttribute="bottom" id="9Un-ix-SGa"/>
                                                 <constraint firstAttribute="trailing" secondItem="Jdv-aM-Vb2" secondAttribute="trailing" id="XYg-KA-wSA"/>
-                                                <constraint firstItem="Jdv-aM-Vb2" firstAttribute="top" secondItem="yco-ur-Cwv" secondAttribute="top" id="hG0-Nm-LR6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="answerCntLbl" destination="8BS-JY-XUx" id="WuE-jT-1rL"/>
+                                            <outlet property="containerView" destination="Jdv-aM-Vb2" id="xhy-ez-HF7"/>
+                                            <outlet property="contextLbl" destination="6u0-aI-MyW" id="K82-60-2hC"/>
+                                            <outlet property="regDateLbl" destination="en2-UJ-UH5" id="s4y-B9-v4x"/>
+                                            <outlet property="tagLbl" destination="ESL-li-FPY" id="7b7-iA-Bs0"/>
+                                            <outlet property="titleLbl" destination="jCD-fd-1yU" id="yiS-G0-1fs"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="W8N-ej-7r9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Expert" id="W8N-ej-7r9" customClass="ExpertTableViewCell" customModule="DFriends" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="309" width="414" height="200.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W8N-ej-7r9" id="BEE-xf-bqL">
@@ -222,7 +230,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eUk-tc-gtW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Company" id="eUk-tc-gtW" customClass="CompanyTableViewCell" customModule="DFriends" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="509.5" width="414" height="200.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eUk-tc-gtW" id="Fst-Gk-QoV">
