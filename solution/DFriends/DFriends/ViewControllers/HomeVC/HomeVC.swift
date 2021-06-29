@@ -90,6 +90,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         } else if section == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Expert") as! ExpertTableViewCell
             cell.expertList = self.expertList
+            cell.delegate = self
             cell.collectionView.reloadData()
             return cell
         } else if section == 3{
@@ -109,6 +110,14 @@ extension HomeVC: SearchTableCellDelegate {
     func cellBtnClicked() {
         let vc = QuestionVC.instance()
         vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+}
+
+extension HomeVC: ExpertTableCellDelegate {
+    func expertCellClicked(_ expert: ModelExpert) {
+        let vc = ExpertDetailVC.instance()
+        vc.modalPresentationStyle = .popover
         self.present(vc, animated: true, completion: nil)
     }
 }

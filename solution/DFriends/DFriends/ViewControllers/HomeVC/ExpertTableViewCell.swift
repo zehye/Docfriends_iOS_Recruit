@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol ExpertTableCellDelegate: AnyObject {
+    func expertCellClicked(_ expert: ModelExpert)
+}
+
 class ExpertTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     var expertList = Array<ModelExpert>()
+    
+    weak var delegate: ExpertTableCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,6 +59,11 @@ extension ExpertTableViewCell: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 120, height: 180)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let expert = self.expertList[indexPath.row]
+        self.delegate?.expertCellClicked(expert)
     }
     
     
