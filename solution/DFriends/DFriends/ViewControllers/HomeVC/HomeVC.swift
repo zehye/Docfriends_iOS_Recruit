@@ -10,6 +10,7 @@ import UIKit
 class HomeVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBtn: UIButton!
     
     var consultList = Array<ModelConsult>()
     var expertList = Array<ModelExpert>()
@@ -52,6 +53,12 @@ class HomeVC: UIViewController {
         } failure: { (error) in
             print(error)
         }
+    }
+    
+    @IBAction func searchBtnClicked(_ sender: UIButton) {
+        let vc = SearchVC.instance()
+        vc.modalPresentationStyle = .popover
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
