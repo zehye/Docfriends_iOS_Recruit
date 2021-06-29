@@ -35,6 +35,8 @@
 		C994B51B268AD008001D83C7 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994B51A268AD008001D83C7 /* CompanyTableViewCell.swift */; };
 		C994B522268AD4FE001D83C7 /* ExpertCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994B520268AD4FE001D83C7 /* ExpertCollectionCell.swift */; };
 		C994B523268AD4FE001D83C7 /* ExpertCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C994B521268AD4FE001D83C7 /* ExpertCollectionCell.xib */; };
+		C994B529268AE766001D83C7 /* CompanyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994B527268AE766001D83C7 /* CompanyCollectionCell.swift */; };
+		C994B52A268AE766001D83C7 /* CompanyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C994B528268AE766001D83C7 /* CompanyCollectionCell.xib */; };
 		C9E9D3779C081D5ACBBF6F8E /* Pods_DFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3845DF5F75EC7DEF4F8F425E /* Pods_DFriends.framework */; };
 		F779847C47575C36BB6F8466 /* Pods_DFriends_DFriendsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434C3F09076A201F143040FE /* Pods_DFriends_DFriendsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -96,6 +98,8 @@
 		C994B51A268AD008001D83C7 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		C994B520268AD4FE001D83C7 /* ExpertCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertCollectionCell.swift; sourceTree = "<group>"; };
 		C994B521268AD4FE001D83C7 /* ExpertCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpertCollectionCell.xib; sourceTree = "<group>"; };
+		C994B527268AE766001D83C7 /* CompanyCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCollectionCell.swift; sourceTree = "<group>"; };
+		C994B528268AE766001D83C7 /* CompanyCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyCollectionCell.xib; sourceTree = "<group>"; };
 		D75463D16615CE091441AEFA /* Pods-DFriendsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFriendsTests.debug.xcconfig"; path = "Target Support Files/Pods-DFriendsTests/Pods-DFriendsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1E1A1122B53B753E4E2CDEC /* Pods-DFriendsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFriendsTests.release.xcconfig"; path = "Target Support Files/Pods-DFriendsTests/Pods-DFriendsTests.release.xcconfig"; sourceTree = "<group>"; };
 		E893219C6B6B7D67F91C6C42 /* Pods-DFriends-DFriendsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFriends-DFriendsUITests.debug.xcconfig"; path = "Target Support Files/Pods-DFriends-DFriendsUITests/Pods-DFriends-DFriendsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -285,6 +289,8 @@
 			children = (
 				C994B520268AD4FE001D83C7 /* ExpertCollectionCell.swift */,
 				C994B521268AD4FE001D83C7 /* ExpertCollectionCell.xib */,
+				C994B527268AE766001D83C7 /* CompanyCollectionCell.swift */,
+				C994B528268AE766001D83C7 /* CompanyCollectionCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 				C994B4F2268AC37E001D83C7 /* Expert.storyboard in Resources */,
 				C994B46A268ABCB4001D83C7 /* Main.storyboard in Resources */,
 				C994B4ED268AC375001D83C7 /* Home.storyboard in Resources */,
+				C994B52A268AE766001D83C7 /* CompanyCollectionCell.xib in Resources */,
 				C994B523268AD4FE001D83C7 /* ExpertCollectionCell.xib in Resources */,
 				C994B4FC268AC38C001D83C7 /* Profile.storyboard in Resources */,
 				C994B4F7268AC385001D83C7 /* Consult.storyboard in Resources */,
@@ -537,6 +544,7 @@
 				C994B4D1268AC2E0001D83C7 /* ConsultVC.swift in Sources */,
 				C994B4A8268ABE20001D83C7 /* ModelExpert.swift in Sources */,
 				C994B4CC268AC2D0001D83C7 /* ExpertVC.swift in Sources */,
+				C994B529268AE766001D83C7 /* CompanyCollectionCell.swift in Sources */,
 				C994B463268ABCB4001D83C7 /* AppDelegate.swift in Sources */,
 				C994B4DC268AC312001D83C7 /* MainTabbarController.swift in Sources */,
 				C994B4E5268AC33F001D83C7 /* NSNotification.swift in Sources */,
