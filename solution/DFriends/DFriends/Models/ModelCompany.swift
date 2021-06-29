@@ -26,4 +26,8 @@ class ModelCompany: NSObject {
             self.introPath = UIImage(data: image)
         }
     }
+    
+    override init() {
+        super.init()
+    }
 }

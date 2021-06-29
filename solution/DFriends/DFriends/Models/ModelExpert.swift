@@ -31,4 +31,8 @@ class ModelExpert: NSObject {
         
         self.tagList = data["tagList"].arrayValue.map{$0["name"].stringValue}
     }
+    
+    override init() {
+        super.init()
+    }
 }
