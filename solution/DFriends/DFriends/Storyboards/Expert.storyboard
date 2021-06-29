@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OLi-BE-icL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--전문가-->
+        <scene sceneID="cVJ-rY-3dv">
+            <objects>
+                <viewController storyboardIdentifier="ExpertVC" id="0nw-Wp-mHM" customClass="ExpertVC" customModule="DFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DY1-yF-Iey">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFZ-LQ-hme">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tb-U9-aZZ">
+                                        <rect key="frame" x="0.0" y="99" width="414" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Lfc-e9-jIM"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전문가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7G-Y0-vfI">
+                                        <rect key="frame" x="184.5" y="58" width="45" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3tb-U9-aZZ" secondAttribute="bottom" id="0SC-Vi-mR2"/>
+                                    <constraint firstItem="3tb-U9-aZZ" firstAttribute="leading" secondItem="yFZ-LQ-hme" secondAttribute="leading" id="7B8-z4-F0H"/>
+                                    <constraint firstItem="3tb-U9-aZZ" firstAttribute="top" secondItem="x7G-Y0-vfI" secondAttribute="bottom" constant="20" id="dfq-Jr-p2b"/>
+                                    <constraint firstAttribute="trailing" secondItem="3tb-U9-aZZ" secondAttribute="trailing" id="flW-PI-0ba"/>
+                                    <constraint firstAttribute="height" constant="100" id="iMf-5s-7MW"/>
+                                    <constraint firstItem="x7G-Y0-vfI" firstAttribute="centerX" secondItem="yFZ-LQ-hme" secondAttribute="centerX" id="oUW-n2-u9y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t8X-uq-Rqx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yFZ-LQ-hme" firstAttribute="top" secondItem="DY1-yF-Iey" secondAttribute="top" id="X0s-CZ-6hi"/>
+                            <constraint firstItem="t8X-uq-Rqx" firstAttribute="trailing" secondItem="yFZ-LQ-hme" secondAttribute="trailing" id="lxd-lr-r7E"/>
+                            <constraint firstItem="yFZ-LQ-hme" firstAttribute="leading" secondItem="t8X-uq-Rqx" secondAttribute="leading" id="p8I-hm-Xqe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="전문가" image="icExpertOff" selectedImage="icExpertOn" id="CNr-bg-e5j"/>
+                    <navigationItem key="navigationItem" id="N4g-gm-4TQ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZG-Yi-NoH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.85507246376824" y="85.714285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rnp-lJ-JEh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="OLi-BE-icL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kd4-yA-C3h">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0nw-Wp-mHM" kind="relationship" relationship="rootViewController" id="a1u-5h-Bal"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="da2-UI-V8Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79.710144927536234" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icExpertOff" width="24" height="24"/>
+        <image name="icExpertOn" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
