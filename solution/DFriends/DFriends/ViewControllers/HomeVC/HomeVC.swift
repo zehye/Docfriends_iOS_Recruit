@@ -81,6 +81,8 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else if section == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Expert") as! ExpertTableViewCell
+            cell.expertList = self.expertList
+            cell.collectionView.reloadData()
             return cell
         } else if section == 3{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Company") as! CompanyTableViewCell
