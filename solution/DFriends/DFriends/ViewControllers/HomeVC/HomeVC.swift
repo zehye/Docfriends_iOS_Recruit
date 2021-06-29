@@ -80,6 +80,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         
         if section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Search") as! SearchTableViewCell
+            cell.delegate = self 
             return cell
         } else if section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Consult") as! ConsultTableViewCell
@@ -101,6 +102,13 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = UIColor.lightGray
         return cell
     }
-    
-    
+}
+
+
+extension HomeVC: SearchTableCellDelegate {
+    func cellBtnClicked() {
+        let vc = QuestionVC.instance()
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
 }

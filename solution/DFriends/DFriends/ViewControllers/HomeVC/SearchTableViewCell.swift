@@ -7,17 +7,23 @@
 
 import UIKit
 
+protocol SearchTableCellDelegate: AnyObject {
+    func cellBtnClicked()
+}
+
+
 class SearchTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var questionBtn: UIButton!
+    weak var delegate: SearchTableCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBAction func questionBtnClicked(_ sender: UIButton) {
+        self.delegate?.cellBtnClicked()
     }
 
 }

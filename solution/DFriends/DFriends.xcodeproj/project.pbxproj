@@ -231,10 +231,10 @@
 				C994B4DB268AC312001D83C7 /* MainTabbarController.swift */,
 				C994B4DA268AC2ED001D83C7 /* HomeVC */,
 				C994B52E268AF02C001D83C7 /* SearchVC.swift */,
+				C994B536268AF998001D83C7 /* QuestionVC.swift */,
 				C994B4CB268AC2D0001D83C7 /* ExpertVC.swift */,
 				C994B4D0268AC2E0001D83C7 /* ConsultVC.swift */,
 				C994B4D5268AC2E9001D83C7 /* ProfileVC.swift */,
-				C994B536268AF998001D83C7 /* QuestionVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

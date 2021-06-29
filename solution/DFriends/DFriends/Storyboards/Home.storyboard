@@ -74,9 +74,40 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="se8-Az-X0c">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRP-L4-xGp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80.5"/>
+                                                            <connections>
+                                                                <action selector="questionBtnClicked:" destination="3cZ-dD-fb4" eventType="touchUpInside" id="2vY-AX-dHx"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김닥톡님이 궁금한 증상을 알려주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhL-cA-8vo">
+                                                            <rect key="frame" x="30" y="20" width="354" height="23"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDU-zT-Ova">
+                                                            <rect key="frame" x="30" y="48" width="354" height="2"/>
+                                                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="2" id="DPN-bv-mjJ"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
+                                                        <constraint firstItem="xRP-L4-xGp" firstAttribute="top" secondItem="se8-Az-X0c" secondAttribute="top" id="2bh-xZ-yqo"/>
+                                                        <constraint firstItem="xRP-L4-xGp" firstAttribute="leading" secondItem="se8-Az-X0c" secondAttribute="leading" id="2yI-I4-QI7"/>
+                                                        <constraint firstItem="PDU-zT-Ova" firstAttribute="top" secondItem="vhL-cA-8vo" secondAttribute="bottom" constant="5" id="3qv-2x-FQ2"/>
+                                                        <constraint firstItem="vhL-cA-8vo" firstAttribute="top" secondItem="se8-Az-X0c" secondAttribute="top" constant="20" id="8fs-vX-zfA"/>
+                                                        <constraint firstItem="PDU-zT-Ova" firstAttribute="leading" secondItem="se8-Az-X0c" secondAttribute="leading" constant="30" id="Hqb-j7-4Af"/>
+                                                        <constraint firstAttribute="bottom" secondItem="xRP-L4-xGp" secondAttribute="bottom" id="OAL-uP-cE7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PDU-zT-Ova" secondAttribute="trailing" constant="30" id="Zi5-1w-dRe"/>
                                                         <constraint firstAttribute="height" constant="80" id="cbL-07-qZw"/>
+                                                        <constraint firstItem="vhL-cA-8vo" firstAttribute="leading" secondItem="se8-Az-X0c" secondAttribute="leading" constant="30" id="emc-fs-aQp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xRP-L4-xGp" secondAttribute="trailing" id="gsd-z6-JdK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="vhL-cA-8vo" secondAttribute="trailing" constant="30" id="qYD-OE-Ppy"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -87,6 +118,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="se8-Az-X0c" secondAttribute="trailing" id="vc8-9P-LcX"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="questionBtn" destination="xRP-L4-xGp" id="ihy-3a-j3n"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Consult" id="JDG-tG-bUj" customClass="ConsultTableViewCell" customModule="DFriends" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="108.5" width="414" height="200.5"/>
@@ -439,6 +473,9 @@
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="xmark" catalog="system"/>
+                                                <connections>
+                                                    <action selector="deleteBtnClicked:" destination="kpU-cm-XoX" eventType="touchUpInside" id="X8a-Ih-NFe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -475,7 +512,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="containerView" destination="qCc-Dh-o27" id="ocY-m5-TzH"/>
+                        <outlet property="deleteBtn" destination="mzK-AR-AJS" id="Zfv-1S-bVW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQD-xy-vMU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
