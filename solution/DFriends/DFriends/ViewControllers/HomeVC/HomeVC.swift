@@ -12,16 +12,16 @@ class HomeVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBtn: UIButton!
     
-    var consultList = Array<ModelConsult>()
+    var list = Array<ModelTableCell>()
+    
     var expertList = Array<ModelExpert>()
     var companyList = Array<ModelCompany>()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loadProject()
         initUI()
+        loadProject()
         initRefresh()
     }
     
@@ -32,8 +32,9 @@ class HomeVC: UIViewController {
     
     func loadProject() {
         WebApiManager.shared.projectList {(json) in
-            let results = json["consultList"]
-            self.consultList = results.arrayValue.compactMap( {ModelConsult($0)} )
+            json["consultList"].arrayValue.compactMap( {ModelConsult($0)} ).forEach({ self.list.append(ModelTableCell(.consult, $0)) })
+            self.list.insert(ModelTableCell(.expert), at: 3)
+            self.list.insert(ModelTableCell(.company), at: 7)
             self.tableView.reloadData()
         } failure: { (error) in
             print(error)
@@ -59,6 +60,7 @@ class HomeVC: UIViewController {
         vc.modalPresentationStyle = .popover
         self.present(vc, animated: true, completion: nil)
     }
+
     
     func initRefresh() {
         let refresh = UIRefreshControl()
@@ -78,14 +80,14 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 1 {
-            return self.consultList.count
-        } else {
+        if section == 0 {
             return 1
+        } else {
+            return self.list.count
         }
     }
     
@@ -94,29 +96,35 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         
         if section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Search") as! SearchTableViewCell
-            cell.delegate = self 
-            return cell
-        } else if section == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Consult") as! ConsultTableViewCell
-            let consult = self.consultList[indexPath.row]
-            cell.setHome(data: consult)
-            return cell
-        } else if section == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Expert") as! ExpertTableViewCell
-            cell.expertList = self.expertList
             cell.delegate = self
-            cell.collectionView.reloadData()
             return cell
-        } else if section == 3{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Company") as! CompanyTableViewCell
-            cell.companyList = self.companyList
-            cell.delegate = self
-            cell.collectionView.reloadData()
-            return cell
+        } else {
+            let model = list[indexPath.row]
+            switch model.type {
+            case .consult:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Consult") as! ConsultTableViewCell
+                if let consult = self.list[indexPath.row].consult {
+                    cell.setHome(data: consult)
+                }
+                return cell
+            case .company:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Company") as! CompanyTableViewCell
+                cell.companyList = self.companyList
+                cell.delegate = self
+                cell.collectionView.reloadData()
+                return cell
+            case .expert:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "Expert") as! ExpertTableViewCell
+                cell.expertList = self.expertList
+                cell.delegate = self
+                cell.collectionView.reloadData()
+                return cell
+                
+            }
         }
-        let cell = UITableViewCell()
-        cell.backgroundColor = UIColor.lightGray
-        return cell
+//        let cell = UITableViewCell()
+//        cell.backgroundColor = UIColor.lightGray
+//        return cell
     }
 }
 

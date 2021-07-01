@@ -36,6 +36,7 @@ class ConsultTableViewCell: UITableViewCell {
         
         self.answerCntLbl.text = "답변 \(data.answerCnt)"
         self.regDateLbl.text = "\(data.regDate)"
+
     }
 
 }

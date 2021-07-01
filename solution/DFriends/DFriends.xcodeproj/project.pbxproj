@@ -44,6 +44,8 @@
 		C994B54D268D7FDE001D83C7 /* Company.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C994B54C268D7FDE001D83C7 /* Company.storyboard */; };
 		C994B553268D8043001D83C7 /* CompanyMoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994B552268D8043001D83C7 /* CompanyMoreVC.swift */; };
 		C994B56B268D8412001D83C7 /* ExpertMoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994B56A268D8412001D83C7 /* ExpertMoreVC.swift */; };
+		C994B570268D8DCF001D83C7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994B56F268D8DCF001D83C7 /* Date.swift */; };
+		C994B575268DA150001D83C7 /* ModelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C994B574268DA150001D83C7 /* ModelTableCell.swift */; };
 		C9E9D3779C081D5ACBBF6F8E /* Pods_DFriends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3845DF5F75EC7DEF4F8F425E /* Pods_DFriends.framework */; };
 		F779847C47575C36BB6F8466 /* Pods_DFriends_DFriendsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434C3F09076A201F143040FE /* Pods_DFriends_DFriendsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -114,6 +116,8 @@
 		C994B54C268D7FDE001D83C7 /* Company.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Company.storyboard; sourceTree = "<group>"; };
 		C994B552268D8043001D83C7 /* CompanyMoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyMoreVC.swift; sourceTree = "<group>"; };
 		C994B56A268D8412001D83C7 /* ExpertMoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertMoreVC.swift; sourceTree = "<group>"; };
+		C994B56F268D8DCF001D83C7 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		C994B574268DA150001D83C7 /* ModelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTableCell.swift; sourceTree = "<group>"; };
 		D75463D16615CE091441AEFA /* Pods-DFriendsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFriendsTests.debug.xcconfig"; path = "Target Support Files/Pods-DFriendsTests/Pods-DFriendsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1E1A1122B53B753E4E2CDEC /* Pods-DFriendsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFriendsTests.release.xcconfig"; path = "Target Support Files/Pods-DFriendsTests/Pods-DFriendsTests.release.xcconfig"; sourceTree = "<group>"; };
 		E893219C6B6B7D67F91C6C42 /* Pods-DFriends-DFriendsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFriends-DFriendsUITests.debug.xcconfig"; path = "Target Support Files/Pods-DFriends-DFriendsUITests/Pods-DFriends-DFriendsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 		C994B4A1268ABE04001D83C7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C994B574268DA150001D83C7 /* ModelTableCell.swift */,
 				C994B4A2268ABE17001D83C7 /* ModelConsult.swift */,
 				C994B4A7268ABE20001D83C7 /* ModelExpert.swift */,
 				C994B4AC268ABE2B001D83C7 /* ModelCompany.swift */,
@@ -298,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				C994B4E4268AC33F001D83C7 /* NSNotification.swift */,
+				C994B56F268D8DCF001D83C7 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -583,6 +589,7 @@
 				C994B4D6268AC2E9001D83C7 /* ProfileVC.swift in Sources */,
 				C994B4D1268AC2E0001D83C7 /* ConsultVC.swift in Sources */,
 				C994B4A8268ABE20001D83C7 /* ModelExpert.swift in Sources */,
+				C994B570268D8DCF001D83C7 /* Date.swift in Sources */,
 				C994B4CC268AC2D0001D83C7 /* ExpertVC.swift in Sources */,
 				C994B529268AE766001D83C7 /* CompanyCollectionCell.swift in Sources */,
 				C994B463268ABCB4001D83C7 /* AppDelegate.swift in Sources */,
@@ -592,6 +599,7 @@
 				C994B52F268AF02C001D83C7 /* SearchVC.swift in Sources */,
 				C994B553268D8043001D83C7 /* CompanyMoreVC.swift in Sources */,
 				C994B516268AD001001D83C7 /* ExpertTableViewCell.swift in Sources */,
+				C994B575268DA150001D83C7 /* ModelTableCell.swift in Sources */,
 				C994B4AD268ABE2B001D83C7 /* ModelCompany.swift in Sources */,
 				C994B522268AD4FE001D83C7 /* ExpertCollectionCell.swift in Sources */,
 				C994B50C268ACFF2001D83C7 /* SearchTableViewCell.swift in Sources */,
