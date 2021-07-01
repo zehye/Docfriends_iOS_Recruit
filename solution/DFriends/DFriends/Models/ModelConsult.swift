@@ -10,6 +10,7 @@ import SwiftyJSON
 
 class ModelConsult: NSObject {
     var seq = Int()
+    
     var title = String()
     var context = String()
     var regDate = Int()
@@ -22,6 +23,7 @@ class ModelConsult: NSObject {
         print("consult: \(data)")
         
         self.seq = data["seq"].intValue
+
         self.title = data["title"].stringValue
         self.context = data["context"].stringValue
         self.regDate = data["regDate"].intValue

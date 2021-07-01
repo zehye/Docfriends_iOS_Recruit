@@ -56,9 +56,6 @@
                     <tabBarItem key="tabBarItem" title="전문가" image="icExpertOff" selectedImage="icExpertOn" id="CNr-bg-e5j"/>
                     <navigationItem key="navigationItem" id="N4g-gm-4TQ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="topLbl" destination="x7G-Y0-vfI" id="p6O-33-k1K"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZG-Yi-NoH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,6 +116,7 @@
                     </view>
                     <connections>
                         <outlet property="backBtn" destination="gC8-UD-yhR" id="k0C-Vx-4hp"/>
+                        <outlet property="topLbl" destination="6N5-Jx-Kne" id="uXa-xT-Mba"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gd8-G8-p37" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -15,8 +15,8 @@ class HomeVC: UIViewController {
     var consultList = Array<ModelConsult>()
     var expertList = Array<ModelExpert>()
     var companyList = Array<ModelCompany>()
-
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -117,7 +117,7 @@ extension HomeVC: SearchTableCellDelegate {
 extension HomeVC: ExpertTableCellDelegate {
     func expertCellClicked(_ expert: ModelExpert) {
         let vc = ExpertDetailVC.instance()
-        vc.modalPresentationStyle = .popover
-        self.present(vc, animated: true, completion: nil)
+        vc.expert = expert
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -9,7 +9,10 @@ import UIKit
 
 class ExpertDetailVC: UIViewController {
     
+    @IBOutlet weak var topLbl: UILabel!
     @IBOutlet weak var backBtn: UIButton!
+    
+    var expert = ModelExpert()
     
     static func instance() -> ExpertDetailVC {
         let vc = UIStoryboard.init(name: "Expert", bundle: nil).instantiateViewController(withIdentifier: "ExpertDetailVC") as! ExpertDetailVC
@@ -22,8 +25,13 @@ class ExpertDetailVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.topLbl.text = expert.name
+    }
+    
     @IBAction func backBtnClicked(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 
 }

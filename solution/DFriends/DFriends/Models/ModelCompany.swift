@@ -16,7 +16,7 @@ class ModelCompany: NSObject {
     
     init(_ data: JSON) {
         super.init()
-        print("company: \(data)")
+//        print("company: \(data)")
         
         self.companyName = data["companyName"].stringValue
         self.address = data["address"].stringValue

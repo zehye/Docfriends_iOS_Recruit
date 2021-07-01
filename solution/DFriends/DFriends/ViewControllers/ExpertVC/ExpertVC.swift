@@ -9,10 +9,6 @@ import UIKit
 
 class ExpertVC: UIViewController {
     
-    @IBOutlet weak var topLbl: UILabel!
-    
-    var expert = ModelExpert()
-    
     static func instance() -> ExpertVC {
         let vc = UIStoryboard.init(name: "Expert", bundle: nil).instantiateViewController(withIdentifier: "ExpertVC") as! ExpertVC
         return vc

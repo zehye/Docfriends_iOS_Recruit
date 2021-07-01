@@ -19,7 +19,7 @@ class ModelExpert: NSObject {
     
     init(_ data: JSON) {
         super.init()
-        print("expert: \(data)")
+//        print("expert: \(data)")
         
         self.name = data["name"].stringValue
         self.typeName = data["typeName"].stringValue
