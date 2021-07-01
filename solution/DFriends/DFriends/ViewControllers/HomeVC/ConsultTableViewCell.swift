@@ -34,8 +34,8 @@ class ConsultTableViewCell: UITableViewCell {
         self.tagLbl.text = tag
         
         self.answerCntLbl.text = "답변 \(data.answerCnt)"
-        self.regDateLbl.text = "\(data.regDate)"
-
+        if let date = data.regDate?.toString(format: "yyyy-MM-dd") {
+            self.regDateLbl.text = date
+        }
     }
-
 }

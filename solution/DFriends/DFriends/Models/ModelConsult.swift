@@ -14,7 +14,7 @@ class ModelConsult: NSObject {
     
     var title = String()
     var context = String()
-    var regDate = Int()
+    var regDate: Date?
 
     var answerCnt = Int()
     var tagList = [String]()
@@ -29,8 +29,7 @@ class ModelConsult: NSObject {
 
         self.title = data["title"].stringValue
         self.context = data["context"].stringValue
-        self.regDate = data["regDate"].intValue
-
+        self.regDate = Date(timeIntervalSince1970: (data["regDate"].doubleValue/1000)) 
         
         self.answerCnt = data["answerCnt"].intValue
         
