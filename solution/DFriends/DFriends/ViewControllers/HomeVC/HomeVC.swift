@@ -22,13 +22,12 @@ class HomeVC: UIViewController {
         
         loadProject()
         initUI()
+        initRefresh()
     }
     
     func initUI() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
-//        self.tableView.separatorStyle = .none
-
     }
     
     func loadProject() {
@@ -59,6 +58,21 @@ class HomeVC: UIViewController {
         let vc = SearchVC.instance()
         vc.modalPresentationStyle = .popover
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    func initRefresh() {
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(updateTableView(refresh:)), for: .valueChanged)
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refresh
+        } else {
+            tableView.addSubview(refresh)
+        }
+    }
+    
+    @objc func updateTableView(refresh: UIRefreshControl) {
+        refresh.endRefreshing()
+        tableView.reloadData()
     }
 }
 
