@@ -223,6 +223,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjj-yl-feW">
                                                             <rect key="frame" x="370" y="10" width="24" height="24"/>
                                                             <state key="normal" image="icMore"/>
+                                                            <connections>
+                                                                <action selector="expertMoreBtnClicked:" destination="W8N-ej-7r9" eventType="touchUpInside" id="hLT-ly-2Y0"/>
+                                                            </connections>
                                                         </button>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="S08-D3-e5x">
                                                             <rect key="frame" x="0.0" y="34" width="414" height="196.5"/>
@@ -268,6 +271,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="collectionView" destination="S08-D3-e5x" id="c06-hT-pKU"/>
+                                            <outlet property="moreBtn" destination="pjj-yl-feW" id="tOr-J0-a0U"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Company" id="eUk-tc-gtW" customClass="CompanyTableViewCell" customModule="DFriends" customModuleProvider="target">

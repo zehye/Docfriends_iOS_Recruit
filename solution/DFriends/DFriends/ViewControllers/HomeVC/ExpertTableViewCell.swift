@@ -9,10 +9,12 @@ import UIKit
 
 protocol ExpertTableCellDelegate: AnyObject {
     func expertCellClicked(_ expert: ModelExpert)
+    func expertMoreBtnClicked()
 }
 
 class ExpertTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var moreBtn: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var expertList = Array<ModelExpert>()
@@ -38,6 +40,11 @@ class ExpertTableViewCell: UITableViewCell {
         layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         self.collectionView.collectionViewLayout = layout
     }
+    
+    @IBAction func expertMoreBtnClicked(_ sender: Any) {
+        self.delegate?.expertMoreBtnClicked()
+    }
+    
 }
 
 extension ExpertTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

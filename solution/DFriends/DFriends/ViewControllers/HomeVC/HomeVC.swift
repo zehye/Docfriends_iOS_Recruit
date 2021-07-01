@@ -116,6 +116,12 @@ extension HomeVC: SearchTableCellDelegate {
 }
 
 extension HomeVC: ExpertTableCellDelegate {
+    func expertMoreBtnClicked() {
+        let vc = ExpertMoreVC.instance()
+        vc.modalPresentationStyle = .popover
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     func expertCellClicked(_ expert: ModelExpert) {
         let vc = ExpertDetailVC.instance()
         vc.expert = expert
