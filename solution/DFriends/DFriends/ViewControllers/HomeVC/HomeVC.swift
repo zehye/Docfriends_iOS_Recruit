@@ -96,6 +96,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         } else if section == 3{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Company") as! CompanyTableViewCell
             cell.companyList = self.companyList
+            cell.delegate = self
             cell.collectionView.reloadData()
             return cell
         }
@@ -118,6 +119,20 @@ extension HomeVC: ExpertTableCellDelegate {
     func expertCellClicked(_ expert: ModelExpert) {
         let vc = ExpertDetailVC.instance()
         vc.expert = expert
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension HomeVC: CompanyTableCellDelegate {
+    func moreBtnClicked() {
+        let vc = CompanyMoreVC.instance()
+        vc.modalPresentationStyle = .popover
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func companyCellClicked(_ company: ModelCompany) {
+        let vc = CompanyVC.instance()
+        vc.company = company
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

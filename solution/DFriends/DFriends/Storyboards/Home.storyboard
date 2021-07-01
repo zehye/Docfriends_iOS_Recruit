@@ -289,6 +289,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sco-Ec-94l">
                                                             <rect key="frame" x="380" y="10" width="24" height="24"/>
                                                             <state key="normal" image="icMore"/>
+                                                            <connections>
+                                                                <action selector="moreBtnClicked:" destination="eUk-tc-gtW" eventType="touchUpInside" id="zj0-qF-PdB"/>
+                                                            </connections>
                                                         </button>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HeK-yW-Wvx">
                                                             <rect key="frame" x="0.0" y="34" width="414" height="197"/>
@@ -335,6 +338,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="collectionView" destination="HeK-yW-Wvx" id="xNh-ff-r7m"/>
+                                            <outlet property="moreBtn" destination="Sco-Ec-94l" id="UUF-Kg-UuX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

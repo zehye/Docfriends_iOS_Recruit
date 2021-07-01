@@ -7,11 +7,18 @@
 
 import UIKit
 
+protocol CompanyTableCellDelegate: AnyObject {
+    func companyCellClicked(_ company: ModelCompany)
+    func moreBtnClicked()
+}
+
 class CompanyTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var moreBtn: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var companyList = Array<ModelCompany>()
+    weak var delegate: CompanyTableCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +39,10 @@ class CompanyTableViewCell: UITableViewCell {
         layout.minimumLineSpacing = 0
         layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 10)
         self.collectionView.collectionViewLayout = layout
+    }
+    
+    @IBAction func moreBtnClicked(_ sender: UIButton) {
+        self.delegate?.moreBtnClicked()
     }
 }
 
@@ -54,6 +65,11 @@ extension CompanyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 280, height: 180)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let company = self.companyList[indexPath.row]
+        self.delegate?.companyCellClicked(company)
     }
     
 }
