@@ -61,6 +61,68 @@
             </objects>
             <point key="canvasLocation" x="973.91304347826099" y="67.633928571428569"/>
         </scene>
+        <!--Consult DetailVC-->
+        <scene sceneID="9xs-Pc-N1M">
+            <objects>
+                <viewController storyboardIdentifier="ConsultDetailVC" id="jAk-YA-ssE" customClass="ConsultDetailVC" customModule="DFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P2l-OO-WNx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-3c-Yd6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtw-tu-8Fd">
+                                        <rect key="frame" x="0.0" y="99" width="414" height="1"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="eEH-W0-S2H"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLO-md-qr0">
+                                        <rect key="frame" x="186" y="58" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhs-xE-IxC">
+                                        <rect key="frame" x="20" y="46" width="48" height="48"/>
+                                        <state key="normal" image="icBack"/>
+                                        <connections>
+                                            <action selector="backBtnClicked:" destination="jAk-YA-ssE" eventType="touchUpInside" id="jbi-Xb-FBR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dtw-tu-8Fd" secondAttribute="bottom" id="Eun-j8-Hu3"/>
+                                    <constraint firstAttribute="trailing" secondItem="dtw-tu-8Fd" secondAttribute="trailing" id="H4s-fE-hou"/>
+                                    <constraint firstItem="lhs-xE-IxC" firstAttribute="leading" secondItem="Ktf-3c-Yd6" secondAttribute="leading" constant="20" id="IAQ-TV-xwz"/>
+                                    <constraint firstItem="gLO-md-qr0" firstAttribute="centerX" secondItem="Ktf-3c-Yd6" secondAttribute="centerX" id="Oon-cE-jmk"/>
+                                    <constraint firstItem="dtw-tu-8Fd" firstAttribute="leading" secondItem="Ktf-3c-Yd6" secondAttribute="leading" id="Sa2-8k-xZ0"/>
+                                    <constraint firstAttribute="height" constant="100" id="gwf-Ot-E3P"/>
+                                    <constraint firstItem="dtw-tu-8Fd" firstAttribute="top" secondItem="lhs-xE-IxC" secondAttribute="bottom" constant="5" id="jWU-uq-LLn"/>
+                                    <constraint firstItem="dtw-tu-8Fd" firstAttribute="top" secondItem="gLO-md-qr0" secondAttribute="bottom" constant="20" id="jvU-zP-fg0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9En-AA-bLn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9En-AA-bLn" firstAttribute="trailing" secondItem="Ktf-3c-Yd6" secondAttribute="trailing" id="aRU-Qd-d7C"/>
+                            <constraint firstItem="Ktf-3c-Yd6" firstAttribute="top" secondItem="9En-AA-bLn" secondAttribute="top" constant="-44" id="cOz-3x-Yw0"/>
+                            <constraint firstItem="Ktf-3c-Yd6" firstAttribute="leading" secondItem="P2l-OO-WNx" secondAttribute="leading" id="vr6-v4-2kR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="lhs-xE-IxC" id="6AG-iK-Rqx"/>
+                        <outlet property="topLbl" destination="gLO-md-qr0" id="IDs-RB-gMk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wS1-NO-jC6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2114" y="68"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="cIV-j4-ENU">
             <objects>
@@ -80,6 +142,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icBack" width="48" height="48"/>
         <image name="icConsultOff" width="24" height="24"/>
         <image name="icConsultOn" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">

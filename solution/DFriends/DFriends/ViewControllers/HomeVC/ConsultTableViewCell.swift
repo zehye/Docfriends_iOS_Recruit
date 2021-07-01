@@ -16,7 +16,6 @@ class ConsultTableViewCell: UITableViewCell {
     @IBOutlet weak var answerCntLbl: UILabel!
     @IBOutlet weak var regDateLbl: UILabel!
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

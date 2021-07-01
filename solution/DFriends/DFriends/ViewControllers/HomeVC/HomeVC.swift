@@ -122,9 +122,21 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
                 
             }
         }
-//        let cell = UITableViewCell()
-//        cell.backgroundColor = UIColor.lightGray
-//        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = list[indexPath.row]
+        switch model.type {
+        case .consult:
+            let vc = ConsultDetailVC.instance()
+            if let consult = model.consult {
+                vc.setData(model: consult)
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
+        case .expert:
+            break
+        case .company:
+            break
+        }
     }
 }
 
