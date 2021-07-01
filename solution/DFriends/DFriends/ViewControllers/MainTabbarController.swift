@@ -11,7 +11,6 @@ class MainTabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         NotificationCenter.default.addObserver(self, selector: #selector(self.showHomeTab), name: .ShowHomeTab, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.showExpertTab), name: .ShowExpertTab, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.showConsultTab), name: .ShowConsultTab, object: nil)

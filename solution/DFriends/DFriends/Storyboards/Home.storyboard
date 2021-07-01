@@ -275,14 +275,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Company" id="eUk-tc-gtW" customClass="CompanyTableViewCell" customModule="DFriends" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="539.5" width="414" height="231"/>
+                                        <rect key="frame" x="0.0" y="539.5" width="414" height="230.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eUk-tc-gtW" id="Fst-Gk-QoV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="231"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="230.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8e-fR-Lkc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="231"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="230.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="근처 병원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUi-zK-LLz">
                                                             <rect key="frame" x="20" y="10" width="74" height="24"/>
@@ -298,7 +298,7 @@
                                                             </connections>
                                                         </button>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HeK-yW-Wvx">
-                                                            <rect key="frame" x="0.0" y="34" width="414" height="197"/>
+                                                            <rect key="frame" x="0.0" y="34" width="414" height="196.5"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bT8-Wh-NLf">
                                                                 <size key="itemSize" width="250" height="180"/>
@@ -328,7 +328,7 @@
                                                         <constraint firstItem="HeK-yW-Wvx" firstAttribute="top" secondItem="JUi-zK-LLz" secondAttribute="bottom" id="S1E-FK-GTS"/>
                                                         <constraint firstItem="Sco-Ec-94l" firstAttribute="top" secondItem="M8e-fR-Lkc" secondAttribute="top" constant="10" id="d9X-wb-ybC"/>
                                                         <constraint firstItem="HeK-yW-Wvx" firstAttribute="leading" secondItem="M8e-fR-Lkc" secondAttribute="leading" id="iFW-ny-DnE"/>
-                                                        <constraint firstAttribute="height" constant="230.5" id="jrU-u4-KvM"/>
+                                                        <constraint firstAttribute="height" constant="230" id="jrU-u4-KvM"/>
                                                         <constraint firstItem="JUi-zK-LLz" firstAttribute="top" secondItem="M8e-fR-Lkc" secondAttribute="top" constant="10" id="rtk-oA-pcU"/>
                                                     </constraints>
                                                 </view>
@@ -360,7 +360,7 @@
                             <constraint firstItem="4Wq-A9-WM0" firstAttribute="top" secondItem="Htr-pM-htI" secondAttribute="bottom" id="tHf-pQ-4dz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" image="icHomeOn" id="zh5-Ei-rJt"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="icHomeOff" selectedImage="icConsultOn" id="zh5-Ei-rJt"/>
                     <navigationItem key="navigationItem" id="pUW-tL-cTX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -546,7 +546,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icHomeOn" width="24" height="24"/>
+        <image name="icConsultOn" width="24" height="24"/>
+        <image name="icHomeOff" width="24" height="24"/>
         <image name="icMore" width="24" height="24"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

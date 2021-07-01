@@ -123,6 +123,23 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let section = indexPath.section
+        
+        if section == 0 {
+            return 80
+        } else {
+            let model = list[indexPath.row]
+            switch model.type {
+            case .consult:
+                return 200.0
+            case .expert:
+                return 230.0
+            case .company:
+                return 230.0
+            }
+        }
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = list[indexPath.row]
         switch model.type {
