@@ -27,7 +27,7 @@ class ExpertDetailVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.topLbl.text = expert.name
+        self.topLbl.text = "전문가명: \(expert.name)"
     }
     
     @IBAction func backBtnClicked(_ sender: UIButton) {

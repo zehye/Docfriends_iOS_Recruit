@@ -48,7 +48,7 @@
                         <viewLayoutGuide key="safeArea" id="t8X-uq-Rqx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yFZ-LQ-hme" firstAttribute="top" secondItem="t8X-uq-Rqx" secondAttribute="top" constant="-44" id="X0s-CZ-6hi"/>
+                            <constraint firstItem="yFZ-LQ-hme" firstAttribute="top" secondItem="DY1-yF-Iey" secondAttribute="top" id="X0s-CZ-6hi"/>
                             <constraint firstItem="t8X-uq-Rqx" firstAttribute="trailing" secondItem="yFZ-LQ-hme" secondAttribute="trailing" id="lxd-lr-r7E"/>
                             <constraint firstItem="yFZ-LQ-hme" firstAttribute="leading" secondItem="t8X-uq-Rqx" secondAttribute="leading" id="p8I-hm-Xqe"/>
                         </constraints>
@@ -81,7 +81,7 @@
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6N5-Jx-Kne">
                                         <rect key="frame" x="186" y="58" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
